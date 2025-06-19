@@ -1,0 +1,21 @@
+stages:
+  import_clean_data:
+    cmd: python3 import_clean_data.py
+    deps:
+    - data/weatherAUS_clean.csv
+    - import_clean_data.py
+    outs:
+    - weather_forecast_data.db
+  analyze_data:
+    cmd: python3 analyze_data.py
+    deps:
+    - weather_forecast_data.db
+    outs:
+    - metrics/analysis_report.txt
+  train_model:
+    cmd: python3 train_model.py
+    deps:
+    - train_model.py
+    - weather_forecast_data.db
+    outs:
+    - models/weather_model.pkl
