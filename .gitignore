@@ -1,1 +1,26 @@
-/weather_forecast_data.db
+# Virtual environment folder
+/venv/
+
+# Python bytecode files
+*.pyc
+__pycache__/
+
+# Temporary database lock files (if any)
+/*.db.lock
+
+# Jupyter Notebook checkpoints (if used)
+.ipynb_checkpoints/
+
+# Log and temporary files
+*.log
+*.tmp
+*.temp
+
+# IDE and editor folders/files (optional)
+.vscode/
+.idea/
+*.swp
+*~
+
+# macOS system files
+.DS_Store
